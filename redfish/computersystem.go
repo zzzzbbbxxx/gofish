@@ -963,7 +963,7 @@ func (computersystem *ComputerSystem) UnmarshalJSON(b []byte) error {
 		OperatingSystem     common.Link
 		SimpleStorage       common.Link
 		SecureBoot          common.Link
-		Storage             common.Link
+		Storages            common.Link // storage 或者 storages
 		NetworkInterfaces   common.Link
 		LogServices         common.Link
 		MemoryDomains       common.Link
@@ -999,7 +999,7 @@ func (computersystem *ComputerSystem) UnmarshalJSON(b []byte) error {
 	computersystem.redundancy = t.Redundancy.String()
 	computersystem.secureBoot = t.SecureBoot.String()
 	computersystem.simpleStorage = t.SimpleStorage.String()
-	computersystem.storage = t.Storage.String()
+	computersystem.storage = t.Storages.String()
 	computersystem.usbControllers = t.USBControllers.String()
 	computersystem.virtualMedia = t.VirtualMedia.String()
 

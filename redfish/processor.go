@@ -495,7 +495,7 @@ type Processor struct {
 	SerialNumber string
 	// Socket shall contain the string which identifies the
 	// physical location or socket of the processor.
-	Socket string
+	Socket int
 	// (v1.11+) The spare part number of the processor.
 	SparePartNumber string
 	// (v1.10+) The clock limit of the processor in MHz.
